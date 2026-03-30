@@ -445,6 +445,19 @@ function Onboarding({ onComplete }) {
   return (
     <div style={{minHeight:"100vh",background:THEME.bg,color:THEME.text,fontFamily:"system-ui,sans-serif"}}>
       <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&display=swap" rel="stylesheet" />
+      <style>{`
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; background: ${THEME.bg}; }
+        input, button { font-family: inherit; }
+        input { background: ${THEME.bg} !important; color: ${THEME.text} !important; -webkit-text-fill-color: ${THEME.text} !important; }
+        input::placeholder { color: ${THEME.dim} !important; opacity: 1; }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0 1000px ${THEME.bg} inset !important; -webkit-text-fill-color: ${THEME.text} !important; caret-color: ${THEME.text}; }
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: ${THEME.border}; border-radius: 4px; }
+      `}</style>
       {/* Progress */}
       <div style={{height:3,background:THEME.border}}>
         <div style={{height:"100%",background:THEME.purple,width:`${((step+1)/steps.length)*100}%`,transition:"width 0.3s ease"}} />
@@ -601,6 +614,19 @@ export default function App() {
   return (
     <div style={{minHeight:"100vh",background:THEME.bg,color:THEME.text,fontFamily:"system-ui,sans-serif",paddingBottom:50}}>
       <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+      <style>{`
+        *, *::before, *::after { box-sizing: border-box; }
+        body { margin: 0; background: ${THEME.bg}; }
+        input, button { font-family: inherit; }
+        input { background: ${THEME.bg} !important; color: ${THEME.text} !important; -webkit-text-fill-color: ${THEME.text} !important; }
+        input::placeholder { color: ${THEME.dim} !important; opacity: 1; }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus { -webkit-box-shadow: 0 0 0 1000px ${THEME.bg} inset !important; -webkit-text-fill-color: ${THEME.text} !important; }
+        ::-webkit-scrollbar { width: 4px; height: 4px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: ${THEME.border}; border-radius: 4px; }
+      `}</style>
 
       {/* Header */}
       <div style={{background:"linear-gradient(135deg,#18152e,#201c38)",padding:"22px 18px 16px",borderBottom:`1px solid ${THEME.border}`}}>
